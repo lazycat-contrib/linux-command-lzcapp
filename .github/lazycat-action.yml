@@ -1,0 +1,43 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: build/linux-command.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: linux-command
+
+build:
+  toolchains: []
+  run_buildscript: false
+
+images:
+  - id: linux-command
+    target: service
+    service: linux-command
+    source: docker.io/wcjiang/linux-command
+    channel: stable
+    sort: semver
+    tag_regex: '^v?[0-9]+\.[0-9]+\.[0-9]+$'
+    delivery:
+      mode: mirror
+      require_digest_match: true
+
+stores:
+  official:
+    enabled: false
+    skip_if_version_exists: false
+    retry:
+      enabled: false
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: Linux Command
+    summary: 从官方镜像自动构建并发布的 Linux 命令手册

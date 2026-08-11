@@ -1,0 +1,19 @@
+package: community.lazycat.app.linuxcommand
+version: 1.22.0
+name: Linux Command
+description: Linux 命令大全搜索工具，包含命令手册、详解和学习资料
+min_os_version: 1.5.0
+homepage: https://github.com/jaywcjlove/linux-command
+author: jaywcjlove
+license: MIT
+
+locales:
+  zh:
+    name: Linux 命令手册
+    description: Linux 命令大全搜索工具，包含命令手册、详解和学习资料
+  zh_CN:
+    name: Linux 命令手册
+    description: Linux 命令大全搜索工具，包含命令手册、详解和学习资料
+  en:
+    name: Linux Command
+    description: A searchable Linux command manual and learning reference
