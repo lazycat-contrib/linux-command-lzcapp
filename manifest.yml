@@ -1,6 +1,6 @@
 lzc-sdk-version: "0.1"
 name: Linux Command
-package: shiina.lzcapp.linuxcommand
+package: community.lazycat.app.linuxcommand
 version: 1.20.0
 description: Linux命令大全搜索工具，内容包含Linux命令手册、详解、学习、搜集。
 homepage: https://github.com/jaywcjlove/linux-command
